@@ -59,7 +59,8 @@ const experiences = [
     duration: 'Jun 2019 – Dec 2019',
     achievements: [
       'Enhanced system performance by 10x by optimizing data transmission in real-time applications',
-      'Developed Android apps in C, improving communication reliability'
+      'Developed Android apps in C, improving communication reliability for embedded hardware systems',
+      'Integrated RTX64 real-time OS to accelerate serial data processing'
     ]
   }
 ]
