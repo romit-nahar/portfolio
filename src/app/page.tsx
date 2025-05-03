@@ -40,6 +40,27 @@ const experiences = [
       'Collaborated with QA teams to automate detection of recurring bugs',
       'Enhanced system performance by 10x through optimization of data transmission'
     ]
+  },
+  {
+    company: 'Drexel University',
+    position: 'Research Assistant',
+    location: 'Philadelphia, PA',
+    duration: 'Oct 2020 – Dec 2020',
+    achievements: [
+      'Assisted in building coursework material in the field of Agile Development and TDD for undergrad students',
+      'Collaborated with my professor to test and track the projects of students and their weekly sprints',
+      'Integrated new features in the existing project: Gloom using CI/CD method'
+    ]
+  },
+  {
+    company: 'Load Control Technologies',
+    position: 'Software Engineer in Research and Development',
+    location: 'King of Prussia, PA',
+    duration: 'Jun 2019 – Dec 2019',
+    achievements: [
+      'Enhanced system performance by 10x by optimizing data transmission in real-time applications',
+      'Developed Android apps in C, improving communication reliability'
+    ]
   }
 ]
 
