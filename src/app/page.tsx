@@ -2,6 +2,7 @@
 
 import Navbar from '@/components/Navbar'
 import ProjectCard from '@/components/ProjectCard'
+import SkillCards from '@/components/SkillCards'
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 
@@ -102,9 +103,9 @@ const Home = () => {
   const isContactInView = useInView(contactRef, { once: true, margin: "-100px" })
 
   return (
-    <>
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <Navbar />
-      <main className="min-h-screen">
+      <main className="container mx-auto px-4 py-8">
         {/* Hero Section */}
         <section className="h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -189,6 +190,21 @@ const Home = () => {
           </div>
         </section>
 
+        {/* Skills Section */}
+        <section id="skills" className="py-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">
+              Technical Skills
+            </h2>
+            <SkillCards />
+          </motion.div>
+        </section>
+
         {/* Projects Section */}
         <section ref={projectsRef} id="projects" className="py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -256,7 +272,7 @@ const Home = () => {
           </div>
         </section>
       </main>
-    </>
+    </div>
   )
 }
 
