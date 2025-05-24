@@ -1,7 +1,6 @@
 'use client'
 
 import Navbar from '@/components/Navbar'
-import ProjectCard from '@/components/ProjectCard'
 import SkillCards from '@/components/SkillCards'
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
@@ -66,40 +65,11 @@ const experiences = [
   }
 ]
 
-const projects = [
-  {
-    title: 'Project 1',
-    description: 'Description of your first project.',
-    imageUrl: '/project1.jpg',
-    technologies: ['Technology 1', 'Technology 2', 'Technology 3'],
-    githubUrl: '#',
-    liveUrl: '#'
-  },
-  {
-    title: 'Project 2',
-    description: 'Description of your second project.',
-    imageUrl: '/project2.jpg',
-    technologies: ['Technology 1', 'Technology 2', 'Technology 3'],
-    githubUrl: '#',
-    liveUrl: '#'
-  },
-  {
-    title: 'Project 3',
-    description: 'Description of your third project.',
-    imageUrl: '/project3.jpg',
-    technologies: ['Technology 1', 'Technology 2', 'Technology 3'],
-    githubUrl: '#',
-    liveUrl: '#'
-  }
-]
-
 const Home = () => {
   const experienceRef = useRef(null)
-  const projectsRef = useRef(null)
   const contactRef = useRef(null)
 
   const isExperienceInView = useInView(experienceRef, { once: true, margin: "-100px" })
-  const isProjectsInView = useInView(projectsRef, { once: true, margin: "-100px" })
   const isContactInView = useInView(contactRef, { once: true, margin: "-100px" })
 
   return (
@@ -147,6 +117,30 @@ const Home = () => {
               </a>
             </motion.div>
           </div>
+        </section>
+
+        {/* Summary Section */}
+        <section className="flex justify-center mt-[-4rem] mb-12 z-10 relative">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-4xl w-full bg-white/90 dark:bg-gray-800/90 shadow-xl rounded-xl px-8 py-8 border border-blue-100 dark:border-blue-900 text-left"
+          >
+            <span className="block text-2xl md:text-2xl font-semibold text-gray-900 dark:text-white mb-2 text-justify">
+              Results-driven <span className="text-blue-600 dark:text-blue-400 font-bold">Software Development Engineer</span> with 4+ years of experience designing and implementing scalable, high-performance applications across financial services and technology sectors.
+            </span>
+            <span className="block text-lg text-gray-700 dark:text-gray-300 mb-2 text-justify">
+              Expert in <span className="font-bold text-blue-600 dark:text-blue-400">cloud-native architectures</span> using AWS, Docker, and Kubernetes with strong proficiency in full-stack development (<span className="font-bold">Java, Python, React</span>).
+            </span>
+            <span className="block text-lg text-gray-700 dark:text-gray-300 mb-2 text-justify">
+              Proven track record in transforming legacy systems to microservices, implementing robust monitoring solutions, and delivering data-driven performance optimizations.
+            </span>
+            <span className="block text-lg text-gray-700 dark:text-gray-300 text-justify">
+              Consistently delivers solutions that enhance <span className="font-bold text-blue-600 dark:text-blue-400">business efficiency, system reliability, and user experience</span> in fast-paced enterprise environments.
+            </span>
+          </motion.div>
         </section>
 
         {/* Experience Section */}
@@ -203,32 +197,6 @@ const Home = () => {
             </h2>
             <SkillCards />
           </motion.div>
-        </section>
-
-        {/* Projects Section */}
-        <section ref={projectsRef} id="projects" className="py-20">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.h2 
-              initial={{ opacity: 0, y: 20 }}
-              animate={isProjectsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.5 }}
-              className="text-3xl font-bold mb-8"
-            >
-              Projects
-            </motion.h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {projects.map((project, index) => (
-                <motion.div
-                  key={project.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={isProjectsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                >
-                  <ProjectCard {...project} />
-                </motion.div>
-              ))}
-            </div>
-          </div>
         </section>
 
         {/* Contact Section */}
