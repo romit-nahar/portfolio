@@ -12,11 +12,15 @@ const experiences = [
     location: 'Salt Lake City, UT',
     duration: 'Sep 2021 – Oct 2024',
     achievements: [
-      'Built and maintained scalable, low-latency microservices in a high-volume trading environment using Java, Dropwizard, and Spring Boot',
-      'Led migration of legacy systems to microservices architecture on RHEL7+, reducing deployment time and increasing maintainability',
-      'Developed performant backend APIs integrated with React.js and Node.js, improving internal tools used across trading operations',
-      'Engineered a Kafka queue integration with a downstream application to automate expiry reporting, saving 2 hours of daily manual work',
-      'Facilitated the transition of backend services to be more robust, fault-tolerant, and cloud-ready'
+      "Led key initiatives on Marquee, Goldman Sachs' flagship product, migrating futures and options business from legacy UI and monolithic backend to interactive React frontend and microservices architecture, improving performance by 50% and reducing backend load by 35% through optimized jQuery querying",
+      'Led migration of mission-critical legacy system to microservices architecture using Dropwizard and Spring Boot, resulting in 35% reduced deployment time and improved system reliability',
+      'Orchestrated containerization of applications using Docker and Kubernetes, enabling seamless scaling and reducing infrastructure costs by approximately 25%',
+      'Implemented comprehensive monitoring using Grafana dashboards for daily reporting systems, identifying and resolving performance bottlenecks in legacy systems that improved transaction processing speed by 40%',
+      'Implemented cloud-native solutions leveraging AWS services (EC2, S3, RDS) to optimize application performance and enhance disaster recovery capabilities',
+      'Collaborated with business stakeholders to translate complex requirements into technical solutions using Java, Python, and SQL, improving client satisfaction metrics by 40%',
+      'Developed responsive front-end components using React and integrated with backend systems via RESTful APIs using Node.js',
+      'Automated deployment workflows through CI/CD pipelines, reducing release cycles from weeks to days',
+      'Spearheaded the migration of legacy applications from RHEL6 to RHEL7+, resulting in enhanced security compliance and 20% performance improvement',
     ]
   },
   {
