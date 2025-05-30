@@ -1,6 +1,7 @@
 'use client'
 
 import Navbar from '@/components/Navbar'
+import ProjectSection from '@/components/ProjectSection'
 import SkillCards from '@/components/SkillCards'
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
@@ -89,7 +90,7 @@ const Home = () => {
               transition={{ duration: 0.5 }}
               className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6"
             >
-              Hi, I'm <span className="text-blue-600 dark:text-blue-400">Romit Nahar</span>
+              Hi, I'm <span className="text-blue-600 dark:text-blue-400">Romit</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -97,7 +98,7 @@ const Home = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-8"
             >
-              Software Development Engineer at Goldman Sachs
+              Software Development Engineer
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -132,8 +133,8 @@ const Home = () => {
             transition={{ duration: 0.6 }}
             className="max-w-4xl w-full bg-white/90 dark:bg-gray-800/90 shadow-xl rounded-xl px-8 py-8 border border-blue-100 dark:border-blue-900 text-left"
           >
-            <span className="block text-2xl md:text-2xl font-semibold text-gray-900 dark:text-white mb-2 text-justify">
-              Results-driven <span className="text-blue-600 dark:text-blue-400 font-bold">Software Development Engineer</span> with 4+ years of experience designing and implementing scalable, high-performance applications across financial services and technology sectors.
+            <span className="block text-lg text-gray-700 dark:text-gray-300 mb-2 text-justify">
+              Results-driven Software Development Engineer with 4+ years of experience designing and implementing scalable, high-performance applications across financial services and technology sectors.
             </span>
             <span className="block text-lg text-gray-700 dark:text-gray-300 mb-2 text-justify">
               Expert in <span className="font-bold text-blue-600 dark:text-blue-400">cloud-native architectures</span> using AWS, Docker, and Kubernetes with strong proficiency in full-stack development (<span className="font-bold">Java, Python, React</span>).
@@ -202,6 +203,9 @@ const Home = () => {
             <SkillCards />
           </motion.div>
         </section>
+
+        {/* Projects Section */}
+        <ProjectSection />
 
         {/* Contact Section */}
         <section ref={contactRef} id="contact" className="py-20 bg-gray-50 dark:bg-gray-800">
