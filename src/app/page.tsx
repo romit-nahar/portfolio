@@ -1,17 +1,17 @@
 'use client'
 
 import Navbar from '@/components/Navbar'
-import ProjectSection from '@/components/ProjectSection'
 import SkillCards from '@/components/SkillCards'
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
+import ProjectSection from '../components/ProjectSection'
 
 const experiences = [
   {
     company: 'Goldman Sachs',
     position: 'Software Development Engineer',
     location: 'Salt Lake City, UT',
-    duration: 'Sep 2021 – Oct 2024',
+    duration: 'Sep 2021 – Nov 2024',
     achievements: [
       "Led key initiatives on Marquee, Goldman Sachs' flagship product, migrating futures and options business from legacy UI and monolithic backend to interactive React frontend and microservices architecture, improving performance by 50% and reducing backend load by 35% through optimized jQuery querying",
       'Led migration of mission-critical legacy system to microservices architecture using Dropwizard and Spring Boot, resulting in 35% reduced deployment time and improved system reliability',
